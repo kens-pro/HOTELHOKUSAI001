@@ -187,17 +187,18 @@
       gap:0;
       align-items:center;
     }
-    .bleed-image{
-      min-height:590px;
-      margin-left:-9vw;
-      background-image:
-        linear-gradient(180deg,rgba(8,6,5,.08),rgba(8,6,5,.46)),
-        var(--concept-image, url("images/piano-detail-japanese-art.jpg"));
-      background-size:cover;
-      background-position:center;
-      border:1px solid rgba(185,151,91,.22);
-      box-shadow:0 42px 90px rgba(0,0,0,.46);
-    }
+  .bleed-image{
+  min-height:590px;
+  width:112%;
+  margin-left:-9vw;
+  background-image:
+    linear-gradient(180deg, rgba(8,6,5,.08), rgba(8,6,5,.46)),
+    var(--concept-image, url("images/piano-detail-japanese-art.jpg"));
+  background-size:cover;
+  background-position:center center;
+  border:1px solid rgba(185,151,91,.22);
+  box-shadow:0 42px 90px rgba(0,0,0,.46);
+}
     .bleed-image::after{
       content:"IMAGE SLOT / partial close-up";
       position:absolute;
@@ -460,6 +461,15 @@
       .value-item{grid-template-columns:1fr;gap:12px}.value-item .word{font-size:2.25rem}.quiet-spec{grid-template-columns:1fr}
       .rental-line{grid-template-columns:1fr;gap:8px}.cta__box{padding:30px 24px}.footer__inner{display:grid;gap:14px}
     }
+    @media(max-width:760px){
+  .bleed-image{
+    width:118%;
+    margin-left:-9%;
+    min-height:330px;
+    background-size:cover;
+    background-position:center center;
+  }
+}
   </style>
 </head>
 <body>
@@ -508,7 +518,8 @@
     <section class="overlap">
       <div class="texture" aria-hidden="true"></div>
       <div class="wrap overlap__grid">
-        <div class="bleed-image reveal" style="--concept-image:url('images/piano-detail-japanese-art.jpg')"></div>
+        <div class="bleed-image reveal"><img src="images/hokusai001.png" alt="日本美術をまとったWrapiピアノのディテール">
+</div>
         <div class="overlap__panel reveal">
           <div class="kicker">Space, not product</div>
           <h2 class="display">The piano becomes the room’s memory.</h2>
